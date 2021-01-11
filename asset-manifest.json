@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/colour-picker-app/static/css/main.6aa12845.chunk.css",
+    "main.js": "/colour-picker-app/static/js/main.d56ba0b7.chunk.js",
+    "main.js.map": "/colour-picker-app/static/js/main.d56ba0b7.chunk.js.map",
+    "runtime-main.js": "/colour-picker-app/static/js/runtime-main.58aa871a.js",
+    "runtime-main.js.map": "/colour-picker-app/static/js/runtime-main.58aa871a.js.map",
+    "static/js/2.483d138f.chunk.js": "/colour-picker-app/static/js/2.483d138f.chunk.js",
+    "static/js/2.483d138f.chunk.js.map": "/colour-picker-app/static/js/2.483d138f.chunk.js.map",
+    "static/js/3.5b703415.chunk.js": "/colour-picker-app/static/js/3.5b703415.chunk.js",
+    "static/js/3.5b703415.chunk.js.map": "/colour-picker-app/static/js/3.5b703415.chunk.js.map",
+    "index.html": "/colour-picker-app/index.html",
+    "static/css/main.6aa12845.chunk.css.map": "/colour-picker-app/static/css/main.6aa12845.chunk.css.map",
+    "static/js/2.483d138f.chunk.js.LICENSE.txt": "/colour-picker-app/static/js/2.483d138f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.58aa871a.js",
+    "static/js/2.483d138f.chunk.js",
+    "static/css/main.6aa12845.chunk.css",
+    "static/js/main.d56ba0b7.chunk.js"
+  ]
+}
