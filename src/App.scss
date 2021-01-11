@@ -1,0 +1,296 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 0.4s all ease;
+  font-family: "Roboto", sans-serif !important;
+}
+
+// EM Function
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+// Rem Function
+$baseFontSize: 16;
+
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+// Transparent
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color;
+  /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+html {
+  background: grey;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  .App {
+    height: 100%;
+    .container {
+      height: 100%;
+      max-width: rem(400);
+      margin: 0 auto;
+      position: relative;
+
+      #sourcecode {
+        background: #fff;
+        width: 100%;
+        padding: rem(10) rem(40);
+        top: rem(50);
+        position: absolute;
+        border-radius: 20px;
+        p {
+          padding: rem(5) 0;
+        }
+        p.code {
+          font-weight: 600;
+        }
+      }
+
+      #colour_picker {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .inputs {
+          width: 100%;
+          padding: rem(10);
+          border-radius: 10px;
+          outline: 0;
+          border: 0;
+          opacity: 0.6;
+          &:focus {
+            opacity: 1;
+          }
+        }
+
+        // button {
+        //   background: #fff;
+        //   outline: 0;
+        //   border: 0;
+        //   border-radius: 5px;
+        //   padding: rem(5) rem(15);
+        //   opacity: 0.6;
+        //   &:hover {
+        //     cursor: pointer;
+        //     opacity: 1;
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+#input_second {
+  display: none;
+}
+
+#input_degSlider {
+  display: none;
+}
+
+.inputSection {
+  width: 100%;
+  margin-bottom: rem(10);
+}
+
+.firstInput,
+.secondInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  img {
+    margin-left: rem(15);
+    max-height: rem(25);
+    &:hover {
+      cursor: pointer;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.firstInput {
+  .firstColorPicker {
+    position: absolute;
+    opacity: 1;
+    top: 45px;
+    z-index: 999999;
+    .photoshop-picker {
+    }
+  }
+}
+
+.secondInput {
+  .secondColorPicker {
+    position: absolute;
+    opacity: 1;
+    top: 45px;
+    z-index: 999999;
+    .photoshop-picker {
+    }
+  }
+}
+
+.gradientButtons {
+  margin: 10px 0px;
+  .doubleBtn_1 {
+    border-radius: 5px 0px 0px 5px !important;
+    border: 1px solid black !important;
+  }
+  .doubleBtn_2 {
+    border-radius: 0px 5px 5px 0px !important;
+    border: 1px solid black !important;
+  }
+}
